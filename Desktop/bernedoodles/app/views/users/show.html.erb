@@ -5,6 +5,6 @@
 
 <div class="row">
   <% @dogs.each do |dog| %>
-        <h4><%= dog.name %></h4>
+        <h4><%=link_to dog.name, dog_path(dog) %></h4>
   <% end %>
 </div>

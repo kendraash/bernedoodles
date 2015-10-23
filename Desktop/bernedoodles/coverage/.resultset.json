@@ -521,6 +521,9 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/KendraAsh/Desktop/bernedoodles/app/models/user.rb": [
@@ -555,9 +558,35 @@
         0,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/home_controller.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
         1,
         null,
         null
@@ -692,6 +721,6 @@
         null
       ]
     },
-    "timestamp": 1445624115
+    "timestamp": 1445625213
   }
 }
