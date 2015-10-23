@@ -1,6 +1,10 @@
 class LittersController < ApplicationController
 
   before_filter :authenticate_user!, except: [ :index, :show ]
+  def show
+    @dog = Dog.find(params[:dog_id])
+    @litter = Litter.find(params[:id])
+  end
 
   def new
     @dog = Dog.find(params[:dog_id])

@@ -5,5 +5,6 @@
 <button><%= link_to "Add Litter", new_dog_litter_path(@dog) %></button>
 
 <% @litters.each do |litter| %>
-  <%= @litter.due_date, dog_litters(@dog, litter) %>
+  <%= link_to litter.due_date, dog_litter_path(@dog, litter) %>
+
 <% end %>
