@@ -21,8 +21,10 @@ group :test, :development do
   gem 'launchy'
   gem 'pry'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end
