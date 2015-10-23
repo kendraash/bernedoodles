@@ -12,9 +12,9 @@
   <a class="navbar-brand" style="color: grey;" href="/">Wine Country Bernedoodles</a>
   <a href="/" > <%= image_tag("house.png", size: "25x25") %>Gallery</a>
   <a href="/" > <%= image_tag("house.png", size: "25x25") %></a>
-
-
 </div>
+  <%= flash[:alert] %>
+  <%= flash[:notice] %>
   <%= yield %>
 
 </body>
