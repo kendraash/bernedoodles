@@ -1,10 +1,5 @@
 class PuppiesController < ApplicationController
 
-  before_filter :authenticate_user!, except: [ :index, :show ]
-  # def show
-  #   @litter = Litter.find(params[:litter_id])
-  #   @puppy = Puppy.find(params[:id])
-  # end
 
   def new
     @dog = Dog.find(params[:dog_id])
