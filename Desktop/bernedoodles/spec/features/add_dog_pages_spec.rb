@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'the add a dog process' do
+describe 'the process of adding a dog' do
   before do
     @user = FactoryGirl.create(:user)
     sign_in(@user)
@@ -12,7 +12,7 @@ describe 'the add a dog process' do
     fill_in 'name', :with => 'Zoe'
     fill_in 'sex', :with => 'female'
     fill_in 'date_of_birth', :with => '2005, 07, 1'
-    click_on 'Create Dog'
+    find("input#create_dog").click
     expect(page).to have_content 'Zoe'
   end
 end

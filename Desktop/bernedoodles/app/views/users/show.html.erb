@@ -1,10 +1,14 @@
-<h3>Hi, <%= @user.email %></h3>
-<button name="button"><%= link_to "Add Dog", new_dog_path %> </button>
-<hr>
-
-
-<div class="row">
-  <% @dogs.each do |dog| %>
-        <h4><%= link_to dog.name, dog_path(dog) %></h4>
+<div class="show">
+  <h2>Hi, <%= @user.email %></h2>
+  <% if current_user.email == "whinecountrybernedoodles@gmail.com" %>
+    <button name="button"><%= link_to "Add Dog", new_dog_path %> </button>
   <% end %>
+  <hr>
+
+
+  <div class="row">
+    <% @dogs.each do |dog| %>
+          <h4><%= link_to dog.name, dog_path(dog) %></h4>
+    <% end %>
+  </div>
 </div>

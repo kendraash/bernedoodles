@@ -1,10 +1,14 @@
-<%= @dog.name %>
+<div class="show">
+  <h2><%= @dog.name %></h2>
 
-<!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
-
-<button><%= link_to "Add Litter", new_dog_litter_path(@dog) %></button>
-
-<% @litters.each do |litter| %>
-  <%= link_to litter.due_date, dog_litter_path(@dog, litter) %>
-
+  <!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
+<% if current_user.email == "whinecountrybernedoodles@gmail.com" %>
+  <button><%= link_to "Add Litter", new_dog_litter_path(@dog) %></button>
 <% end %>
+
+  <hr>
+  <h3>Upcoming Litters</h3>
+  <% @litters.each do |litter| %>
+    <%= link_to litter.due_date.strftime("%B %d, %Y"), dog_litter_path(@dog, litter) %>
+  <% end %>
+</div>
