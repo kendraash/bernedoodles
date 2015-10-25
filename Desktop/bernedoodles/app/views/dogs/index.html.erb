@@ -1,0 +1,17 @@
+<div class="show">
+  <h2>Adult Dogs</h2>
+  <hr>
+  <% @dogs.each do |dog| %>
+    <h3> <%= link_to dog.name, dog_path(dog) %> </h3>
+    <ul>
+
+    </ul>
+    <% dog.litters.each do |litter| %>
+      <li> <%=link_to "Due Date: #{litter.due_date.strftime('%B %d, %Y')}", dog_litter_path(dog, litter)%></li>
+      <% litter.puppies.each do |puppy| %>
+      <li> <%= link_to "Name: #{puppy.name}", dog_litter_puppy_path(dog, litter, puppy) %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

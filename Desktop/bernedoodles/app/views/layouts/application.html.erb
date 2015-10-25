@@ -6,6 +6,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Important Owl stylesheet -->
+  <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+  <!-- Default Theme -->
+  <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+  <!--  jQuery 1.7+  -->
+  <script src="jquery-1.9.1.min.js"></script>
+  <!-- Include js plugin -->
+  <script src="assets/owl-carousel/owl.carousel.js"></script>
 </head>
 <body>
 
@@ -16,6 +24,8 @@
     </div>
 
     <ul class="nav navbar-nav">
+      <li><%= link_to "Dogs", dogs_path %></li>
+
       <% if user_signed_in? %>
       <li><%= link_to "#{current_user.email}", user_path(current_user) %></li>
       <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
