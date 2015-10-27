@@ -10,7 +10,21 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-// = require jquery
-// = require jquery_ujs
-// //= require turbolinks
-// //= require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree .
+//= require owl.carousel
+$(document).ready(function() {
+
+  $(".owl-carousel").owlCarousel({
+    autoplay: true,
+    autoplaySpeed: 5000, //Set AutoPlay to 3 seconds
+    items : 4,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [979,3],
+    loop : true
+
+  });
+
+});

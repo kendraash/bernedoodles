@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/openscript/owlcarousel2-rails.git
+  revision: edd7d75415f304dd5261e5ed1b6ed8af29c63b14
+  specs:
+    owlcarousel2-rails (2.0.0.beta.2.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -212,6 +218,7 @@ DEPENDENCIES
   font-awesome-sass
   jquery-rails
   launchy
+  owlcarousel2-rails!
   pg
   pry
   quiet_assets
@@ -224,6 +231,3 @@ DEPENDENCIES
   turbolinks
   uglifier
   web-console
-
-BUNDLED WITH
-   1.10.6

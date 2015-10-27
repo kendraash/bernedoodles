@@ -1,8 +1,10 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "owl.carousel";
+@import "owl.carousel/owl.theme.default";
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "font-awesome-sprockets";
- @import "font-awesome";
 
 body {
   background: url(/assets/brown.jpg) no-repeat center center fixed;
@@ -29,4 +31,13 @@ input {
 .breed-description {
   padding: 10px;
   background-color: black;
+}
+
+#carousel-home {
+  margin: 3px;
+}
+#carousel-home .item{
+  display: block;
+  width: 100%;
+  height: auto;
 }

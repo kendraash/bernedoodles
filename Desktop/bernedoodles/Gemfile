@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem "devise"
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
+gem 'owlcarousel2-rails', github: 'openscript/owlcarousel2-rails'
 
 group :development do
   gem 'byebug'
