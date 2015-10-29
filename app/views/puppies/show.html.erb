@@ -1,0 +1,14 @@
+<div class="show">
+  <h2><%= @puppy.name %></h2>
+    DOB: <%= @puppy.date_of_birth.strftime("%B %d, %Y") %> <br>
+    Sex: <%= @puppy.sex %> <br>
+
+
+
+  <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+    <button><%= link_to "Edit Puppy", edit_dog_litter_puppy_path(@dog, @litter, @puppy)%></button>
+    <button><%= link_to "Delete", dog_litter_puppy_path(@dog, @litter, @puppy),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></button>
+  <% end %>
+</div>

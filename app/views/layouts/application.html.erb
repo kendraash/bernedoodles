@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+  <title>Bernedoodles</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"> Whine Country Bernedoodles</a>
+    </div>
+
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Dogs", dogs_path %></li>
+
+      <% if user_signed_in? %>
+      <li><%= link_to "#{current_user.email}", user_path(current_user) %></li>
+      <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "login", new_user_session_path %></li>
+      <li><%= link_to "signup", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+  <div class="container">
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
+    <%= yield %>
+  </div>
+</body>
+</html>
