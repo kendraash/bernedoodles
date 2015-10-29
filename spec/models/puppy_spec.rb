@@ -8,6 +8,7 @@ describe Puppy do
 
   it { should belong_to :litter}
   it { should belong_to :user}
+  it { should have_many :pictures}
 
 
 end

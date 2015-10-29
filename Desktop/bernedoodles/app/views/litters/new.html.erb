@@ -1,8 +1,0 @@
-<h1>Add Litter</h1>
-<%= render 'layouts/errors', :object => @litter %>
-
-<%= form_for [@dog, @litter] do |f| %>
-  <%= f.label :due_date %>
-  <%= f.date_field :due_date %>
-  <%= f.submit %>
-<% end %>

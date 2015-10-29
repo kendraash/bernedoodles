@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :puppies
     end
   end
-
+  resources :pictures
   resources :users, only: [:index, :show]
   get 'userpage', to: 'users#index', as: 'userpage'
 
