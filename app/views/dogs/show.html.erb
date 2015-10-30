@@ -1,8 +1,5 @@
 <div class="show">
   <h2><%= @dog.name %></h2>
-  <% @dog.pictures.each do |picture| %>
-    <%= image_tag picture.name(:medium) %>
-  <% end %>
 
   <!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
 <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
@@ -16,5 +13,9 @@
   <h3>Upcoming Litters</h3>
   <% @litters.each do |litter| %>
     <%= link_to litter.due_date.strftime("%B %d, %Y"), dog_litter_path(@dog, litter) %>
+  <% end %>
+  <br>
+  <% @dog.pictures.each do |picture| %>
+    <%= image_tag picture.name(:medium) %>
   <% end %>
 </div>

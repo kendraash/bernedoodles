@@ -10,12 +10,8 @@
   </div>
   <br>
   <div class="owl-carousel" id = "carousel-home">
-    <div class="item"><%= image_tag "1.jpg" %> </div>
-    <div class="item"><%= image_tag "2.jpg" %> </div>
-    <div class="item"><%= image_tag "3.jpg" %> </div>
-    <div class="item"><%= image_tag "4.jpg" %> </div>
-    <div class="item"><%= image_tag "5.jpg" %> </div>
-    <div class="item"><%= image_tag "6.jpg" %> </div>
-    <div class="item"><%= image_tag "7.jpg" %> </div>
+    <% @pictures.each do |picture| %>
+      <div class="item"><%= image_tag picture.name.url(:medium) %> </div>
+    <% end %>
   </div>
 </div>
