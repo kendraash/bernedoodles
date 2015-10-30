@@ -4,9 +4,9 @@
     <%= image_tag picture.name(:medium) %>
   <% end %>
 
-  <button><%= link_to "Add Picture", new_picture_path(dog: @dog) %></button>
   <!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
 <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
+  <button><%= link_to "Add Picture", new_picture_path(dog: @dog) %></button>
   <button><%= link_to "Add Litter", new_dog_litter_path(@dog) %></button>
 <% end %>
 
