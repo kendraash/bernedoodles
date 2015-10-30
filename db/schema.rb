@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(version: 20151029184257) do
   end
 
   create_table "pictures", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name_file_name"
+    t.string   "name_content_type"
+    t.integer  "name_file_size"
+    t.datetime "name_updated_at"
     t.integer  "imageable_id"
     t.string   "imageable_type"
     t.datetime "created_at"

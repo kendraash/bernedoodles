@@ -12,7 +12,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'owlcarousel2-rails', github: 'openscript/owlcarousel2-rails'
 gem "paperclip", "~> 4.3"
-
+gem 'hirb'
 
 group :development do
   gem 'byebug'

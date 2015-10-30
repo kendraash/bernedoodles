@@ -1,9 +1,3 @@
 <h1>Add Picture </h1>
 
-<%= form_for @picture do |f| %>
-  <%= f.hidden_field :imageable_id, :value => @imageable_id  %>
-  <%= f.hidden_field :imageable_type, :value => @imageable_type  %>
-  <%= f.label :name %>
-  <%= f.file_field :name %>
-  <%= f.submit %>
-<% end %>
+<%= render "form" %>

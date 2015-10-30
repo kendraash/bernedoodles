@@ -94,6 +94,7 @@ GEM
       sass (>= 3.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hirb (0.7.3)
     i18n (0.7.0)
     jquery-rails (4.0.5)
       rails-dom-testing (~> 1.0)
@@ -227,6 +228,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   font-awesome-sass
+  hirb
   jquery-rails
   launchy
   owlcarousel2-rails!
@@ -243,3 +245,6 @@ DEPENDENCIES
   turbolinks
   uglifier
   web-console
+
+BUNDLED WITH
+   1.10.6
