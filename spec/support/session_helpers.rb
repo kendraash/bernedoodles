@@ -6,3 +6,8 @@ def sign_in
   fill_in 'Password', with: @admin_user.password
   click_button 'Log in'
 end
+
+def create_factories
+  @dog = FactoryGirl.create(:dog)
+  @litter = FactoryGirl.create(:litter)
+end
