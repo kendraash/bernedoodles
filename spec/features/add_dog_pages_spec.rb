@@ -15,4 +15,12 @@ describe 'the process of adding a dog' do
     find("input#create_dog").click
     expect(page).to have_content 'Zoe'
   end
+  it 'Displays errors if a field is left blank for a new dog' do
+    visit user_path(@admin_user)
+    find('#new_dog_link').click
+    fill_in 'Name', :with => 'Zoe'
+    fill_in 'Sex', :with => 'female'
+    find("input#create_dog").click
+    expect(page).to have_content 'errors'
+  end
 end
