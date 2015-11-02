@@ -13,16 +13,17 @@ body {
 -o-background-size: cover;
 background-size: cover;
   font-family: 'Raleway', sans-serif;
-  color: white;
+  color: #dedad5;
 }
 a {
   color: #4BD3EB;
+
 }
 a:hover {
   color: white;
 }
 input {
-  color: white;
+  color: #dedad5;
   background-color: #36ADD9;
 }
 .show {
@@ -30,7 +31,6 @@ input {
 }
 .breed-description {
   padding: 10px;
-  background-color: black;
 }
 
 #carousel-home {
@@ -44,11 +44,26 @@ input {
 
 label {
   background-color: none;
-  color: white;
+  color: #dedad5;
   padding: 0;
 
 }
 form {
   background-color: none;
   padding: 0;
+}
+
+.button {
+  font: bold 1em "Raleway";
+  color: #43bdd3;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+.container {
+  background-color: rgba(0, 0, 0, .5)
 }

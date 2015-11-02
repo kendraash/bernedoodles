@@ -4,7 +4,7 @@
   <!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
 <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
   <div id="picture_ajax" class = "text-center">
-    <%= link_to "Add Picture", new_picture_path(dog: @dog), id: "add_picture_link", remote: true %>
+    <%= link_to "Add Picture", new_picture_path(dog: @dog), class: "button", id: "add_picture_link", remote: true %>
   </div>
   <div id="litter_ajax">
     <%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %>
