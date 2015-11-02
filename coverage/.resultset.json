@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/features/add_dog_pages_spec.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/features/add_dog_pages_spec.rb": [
         1,
         1,
         null,
@@ -29,7 +29,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/rails_helper.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -59,14 +59,14 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/environment.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/application.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/application.rb": [
         1,
         null,
         1,
@@ -103,12 +103,12 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/boot.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/environments/test.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/environments/test.rb": [
         1,
         null,
         null,
@@ -152,7 +152,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/assets.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -165,7 +165,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/backtrace_silencers.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -174,12 +174,12 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/cookies_serializer.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/devise.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -443,13 +443,13 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/inflections.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -467,18 +467,18 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/mime_types.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/session_store.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/initializers/wrap_parameters.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -494,7 +494,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/config/routes.rb": [
+      "/Users/Guest/Desktop/bernedoodles/config/routes.rb": [
         1,
         1,
         1,
@@ -510,7 +510,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/models/user.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/models/user.rb": [
         1,
         null,
         null,
@@ -522,18 +522,18 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/application_controller.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/helpers/application_helper.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/dogs_controller.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/controllers/dogs_controller.rb": [
         1,
         null,
         1,
@@ -565,14 +565,14 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/home_controller.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/controllers/home_controller.rb": [
         1,
         1,
         5,
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/litters_controller.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/controllers/litters_controller.rb": [
         1,
         null,
         1,
@@ -605,7 +605,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/pictures_controller.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/controllers/pictures_controller.rb": [
         1,
         null,
         1,
@@ -630,7 +630,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/puppies_controller.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/controllers/puppies_controller.rb": [
         1,
         null,
         1,
@@ -691,7 +691,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/controllers/users_controller.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -704,7 +704,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/models/dog.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/models/dog.rb": [
         1,
         1,
         1,
@@ -716,7 +716,7 @@
         1,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/models/litter.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/models/litter.rb": [
         1,
         1,
         1,
@@ -726,14 +726,14 @@
         1,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/models/picture.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/models/picture.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/app/models/puppy.rb": [
+      "/Users/Guest/Desktop/bernedoodles/app/models/puppy.rb": [
         1,
         1,
         1,
@@ -746,7 +746,7 @@
         1,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/factories.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/factories.rb": [
         1,
         1,
         1,
@@ -771,7 +771,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/support/session_helpers.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/support/session_helpers.rb": [
         1,
         4,
         4,
@@ -786,7 +786,7 @@
         2,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/features/add_puppy_pages_spec.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/features/add_puppy_pages_spec.rb": [
         1,
         1,
         null,
@@ -818,7 +818,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/features/add_user_pages_spec.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/features/add_user_pages_spec.rb": [
         1,
         null,
         1,
@@ -845,7 +845,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/models/dog_spec.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/models/dog_spec.rb": [
         1,
         null,
         1,
@@ -858,7 +858,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/models/litter_spec.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/models/litter_spec.rb": [
         1,
         null,
         1,
@@ -870,7 +870,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/models/puppy_spec.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/models/puppy_spec.rb": [
         1,
         null,
         1,
@@ -886,7 +886,7 @@
         null,
         null
       ],
-      "/Users/KendraAsh/Desktop/bernedoodles/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/bernedoodles/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -898,6 +898,6 @@
         null
       ]
     },
-    "timestamp": 1446307073
+    "timestamp": 1446500959
   }
 }

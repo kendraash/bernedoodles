@@ -5,8 +5,9 @@
 <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
 
   <button><%= link_to "Add Picture", new_picture_path(dog: @dog), id: "add_picture_link", remote: true %></button>
-
-  <button><%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %></button>
+  <div id="litter_ajax">
+    <button><%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %></button>
+  </div>
 <% end %>
 
   <hr>
