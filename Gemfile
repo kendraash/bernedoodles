@@ -33,3 +33,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
 end
+
+gem 'rails_12factor', group: :production
+
+ruby "2.2.0"
