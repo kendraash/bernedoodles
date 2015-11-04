@@ -1,5 +1,10 @@
 <div class="show">
   <h2>Adult Dogs</h2>
+  <% if current_user.email == "whinecountrybernedoodles@gmail.com" %>
+  <div id="dog_ajax">
+    <%= link_to "Add Dog", new_dog_path, id: "new_dog_link", remote: true, :html => {class: "button btn-md"} %>
+  </div>
+  <% end %>
   <hr>
   <% @dogs.each do |dog| %>
     <h3> <%= link_to dog.name, dog_path(dog) %> </h3>
