@@ -3,7 +3,7 @@
   <h2><%= @dog.name%> Due: <%= @litter.due_date.strftime("%B %d, %Y") %> </h2>
   <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
   <div id="puppy_ajax">
-    <button><%= link_to "Add Puppy", new_dog_litter_puppy_path(@dog, @litter), id: "new_puppy_link", remote: true %></button>
+    <%= link_to "Add Puppy", new_dog_litter_puppy_path(@dog, @litter), id: "new_puppy_link", remote: true %>
   </div>
   <% end %>
   <hr>

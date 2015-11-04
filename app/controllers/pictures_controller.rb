@@ -2,8 +2,13 @@ class PicturesController < ApplicationController
 
   def new
     @picture = Picture.new
-    @imageable_id = (params[:dog])
-    @imageable_type = 'Dog'
+    if params[:dog]
+      @imageable_id = (params[:dog])
+      @imageable_type = 'Dog'
+    elsif params[:puppy]
+      @imageable_id = (params[:puppy])
+      @imageable_type = 'Puppy'
+    end
   end
 
   def create
