@@ -28,6 +28,7 @@
 
     <ul class="nav navbar-nav">
       <li><%= link_to "Dogs", dogs_path %></li>
+      <li><%= link_to "Info", info_path %></li>
 
       <% if user_signed_in? %>
       <li><%= link_to "#{current_user.email}", user_path(current_user) %></li>
@@ -38,10 +39,18 @@
       <% end %>
     </ul>
   </nav>
-  <div class="container">
+
     <%= flash[:alert] %>
     <%= flash[:notice] %>
     <%= yield %>
+
+
+  <div id="footer">
+      <p>
+        whinecountrybernedoodles@gmail.com |
+
+        503-550-1920
+      </p>
   </div>
 </body>
 </html>

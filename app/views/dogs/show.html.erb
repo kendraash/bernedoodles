@@ -1,23 +1,36 @@
-<div class="show">
-  <h2><%= @dog.name %></h2>
+<div class="container" id="container-box">
+  <div class="show">
+    <h2><%= @dog.name %></h2>
 
-  <!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
-<% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
-  <div id="picture_ajax" class = "text-center">
-    <%= link_to "Add Picture", new_picture_path(dog: @dog), class: "button", id: "add_picture_link", remote: true %>
-  </div>
-  <div id="litter_ajax">
-    <%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %>
-  </div>
-<% end %>
+    <!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
+  <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
+    <div id="picture_ajax" class = "text-center">
+      <%= link_to "Add Picture", new_picture_path(dog: @dog), class: "button", id: "add_picture_link", remote: true %>
+    </div>
+    <div id="litter_ajax">
+      <%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %>
+    </div>
+  <% end %>
 
-  <hr>
-  <h3>Upcoming Litters</h3>
-  <% @litters.each do |litter| %>
-    <%= link_to litter.due_date.strftime("%B %d, %Y"), dog_litter_path(@dog, litter) %>
-  <% end %>
-  <br>
-  <% @dog.pictures.each do |picture| %>
-    <%= image_tag picture.name(:medium) %>
-  <% end %>
+    <hr>
+    <h3>Upcoming Litters</h3>
+    <% @litters.each do |litter| %>
+      <%= link_to litter.due_date.strftime("%B %d, %Y"), dog_litter_path(@dog, litter) %>
+    <% end %>
+    <br>
+  </div>
 </div>
+<div class="container">
+  <div class="text-center">
+    <% @dog.pictures.each do |picture| %>
+      <div class="col-sm-4">
+        <%= image_tag picture.name(:medium) %>
+        <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+          <%= link_to "Delete", picture_path(picture),
+                             :data => {:confirm => "You sure?",
+                                       :method => "delete"} , class: "button" %>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   get 'userpage', to: 'users#index', as: 'userpage'
 
+  get 'info', to: 'info#index', as: 'info'
 end

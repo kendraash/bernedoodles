@@ -1,17 +1,37 @@
-<div class="show">
-  <h2><%= @puppy.name %></h2>
-    DOB: <%= @puppy.date_of_birth.strftime("%B %d, %Y") %> <br>
-    Sex: <%= @puppy.sex %> <br>
+<div class="container" id = "container-box">
+  <div class="show">
+    <h2><%= @puppy.name %></h2>
+      DOB: <%= @puppy.date_of_birth.strftime("%B %d, %Y") %> <br>
+      Gender: <%= @puppy.sex %> <br>
 
+ <%= link_to "Back to puppies", dog_litter_path(@dog, @litter)%> 
 
-
-  <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
-  <div id="picture_ajax" class = "text-center">
-    <%= link_to "Add Picture", new_picture_path(puppy: @puppy), class: "button", id: "add_picture_link", remote: true %>
+    <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+    <div id="picture_ajax" class = "text-center">
+      <%= link_to "Add Picture", new_picture_path(puppy: @puppy), class: "button", id: "add_picture_link", remote: true %><br>
+    </div>
+      <%= link_to "Edit Puppy", edit_dog_litter_puppy_path(@dog, @litter, @puppy), class: "button"%> <br>
+      <%= link_to "Delete", dog_litter_puppy_path(@dog, @litter, @puppy),
+                           :data => {:confirm => "You sure?",
+                                     :method => "delete"} , class: "button" %>
+    <% end %>
   </div>
-    <button><%= link_to "Edit Puppy", edit_dog_litter_puppy_path(@dog, @litter, @puppy)%></button>
-    <button><%= link_to "Delete", dog_litter_puppy_path(@dog, @litter, @puppy),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></button>
+</div>
+
+<div class="container">
+
+  <div class="text-center">
+
+  <% @puppy.pictures.each do |picture| %>
+    <div class="col-sm-4">
+      <%= image_tag picture.name(:medium) %>
+      <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+        <%= link_to "Delete", picture_path(picture),
+                           :data => {:confirm => "You sure?",
+                                     :method => "delete"} , class: "button" %>
+      <% end %>
+    </div>
   <% end %>
+  </div>
+
 </div>
