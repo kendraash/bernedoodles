@@ -3,10 +3,10 @@
 <%= form_for [@dog, @litter, @puppy] do |f|%>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.radio_button_tag(:sex, "female") %>
-  <%= f.label_tag(:sex_female, "Female") %>
-  <%= f.radio_button_tag(:sex, "male") %>
-  <%= f.label_tag(:sex_male, "Male") %>
+  <%= f.radio_button(:sex, "female") %>
+  <%= f.label(:Female) %>
+  <%= f.radio_button(:sex, "male") %>
+  <%= f.label(:Male) %>
   <%= f.label :weight %>
   <%= f.text_field :weight %>
   <%= f.label :date_of_birth %>

@@ -13,7 +13,7 @@
 
       <ul><u><h3>Girls</h3></u>
       <% @puppies.each do |puppy| %>
-        <% if puppy.sex == "Female" %>
+        <% if puppy.sex == "female" %>
           <li><h4><%= link_to puppy.name, dog_litter_puppy_path(@dog, @litter, puppy) %> </h4></li>
         <% end %>
       <% end %>
@@ -23,7 +23,7 @@
 
       <ul><u><h3>Boys</h3></u>
       <% @puppies.each do |puppy| %>
-        <% if puppy.sex == "Male" %>
+        <% if puppy.sex == "male" || puppy.sex == "Male"%>
           <li><h4><%= link_to puppy.name, dog_litter_puppy_path(@dog, @litter, puppy) %> </h4></li>
         <% end %>
       <% end %>
