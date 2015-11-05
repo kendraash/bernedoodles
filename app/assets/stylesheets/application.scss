@@ -18,13 +18,14 @@ background-size: cover;
 a {
   color: #dedad5;
 
+
 }
 a:hover {
   color: #b20000;
 }
 input {
-  color: #dedad5;
-  background-color: #36ADD9;
+  color: black;
+  background-color: white;
 }
 .show {
   text-align: center;
@@ -90,4 +91,8 @@ img {
 
 td {
   font-size: 2em;
+}
+
+li  {
+  list-style: none;
 }

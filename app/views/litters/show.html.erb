@@ -9,19 +9,25 @@
     <% end %>
     <hr>
     <h2>Puppies</h2>
-    <table>
-      <tr>
-        <td><h3>Girls</h3></td>
-        <td><h3>Boys</h3></td>
-      </tr>
+    <div class="col-md-6">
 
-    <% @puppies.each do |puppy| %>
-      <% if puppy.sex == "Female" %>
-        <td><h4><%= link_to puppy.name, dog_litter_puppy_path(@dog, @litter, puppy) %> </h4></td>
-      <% else %>
-    </td><h4><%= link_to puppy.name, dog_litter_puppy_path(@dog, @litter, puppy) %> </h4></td>
+      <ul><u><h3>Girls</h3></u>
+      <% @puppies.each do |puppy| %>
+        <% if puppy.sex == "Female" %>
+          <li><h4><%= link_to puppy.name, dog_litter_puppy_path(@dog, @litter, puppy) %> </h4></li>
+        <% end %>
       <% end %>
-    <% end %>
-  </table>
+      </ul>
+    </div>
+    <div class="col-md-4">
+
+      <ul><u><h3>Boys</h3></u>
+      <% @puppies.each do |puppy| %>
+        <% if puppy.sex == "Male" %>
+          <li><h4><%= link_to puppy.name, dog_litter_puppy_path(@dog, @litter, puppy) %> </h4></li>
+        <% end %>
+      <% end %>
+    </ul>
+    </div>
   </div>
 </div>

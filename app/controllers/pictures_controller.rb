@@ -1,5 +1,9 @@
 class PicturesController < ApplicationController
 
+  def index
+    @pictures = Picture.all
+  end
+  
   def new
     @picture = Picture.new
     if params[:dog]
