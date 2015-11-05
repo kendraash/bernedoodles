@@ -1,10 +1,10 @@
-<div class="container" id = "container-box">
+<div class="container box">
   <div class="show">
     <h2><%= @puppy.name %></h2>
       DOB: <%= @puppy.date_of_birth.strftime("%B %d, %Y") %> <br>
       Gender: <%= @puppy.sex %> <br>
 
- <%= link_to "Back to puppies", dog_litter_path(@dog, @litter)%> 
+ <%= link_to "Back to puppies", dog_litter_path(@dog, @litter)%>
 
     <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
     <div id="picture_ajax" class = "text-center">

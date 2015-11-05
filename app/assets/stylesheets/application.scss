@@ -4,8 +4,11 @@
 @import "font-awesome";
 @import "owl.carousel";
 @import "owl.carousel/owl.theme.default";
-
-
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
   background: url(/assets/brown.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14,6 +17,8 @@ body {
 background-size: cover;
   font-family: 'Raleway', sans-serif;
   color: #dedad5;
+  min-height: 100vh;
+
 }
 a {
   color: #dedad5;
@@ -31,7 +36,7 @@ input {
   text-align: center;
 }
 .breed-description {
-  padding: 10px;
+  font-size: 1.5em;
 }
 
 #carousel-home {
@@ -69,12 +74,15 @@ form {
   border-left: 1px solid #CCCCCC;
 
 }
-#container-box {
-  background-color: rgba(0, 0, 0, .5)
+.box {
+  background-color: rgba(0, 0, 0, .5);
+  padding: 10px;
+
 }
 
 
 #footer {
+  margin-top: 15px;
   padding-top: 15px;
    position:absolute;
    bottom:0;
@@ -97,18 +105,19 @@ li  {
   list-style: none;
 }
 
+#landing-page {
+  padding: 10px;
+}
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #portrait {
-    width: 100%;
+  .box {
+    width: 80%;
   }
-  .landing-page h1, .landing-page h2{
-    text-align: left;
-  }
+
 }
 
 /* Medium devices (desktops, 992px and up) */

@@ -1,8 +1,7 @@
-
+<strong><h1>Whine Country Bernedoodles</h1></strong>
+<div class="container box">
   <div class="breed-description">
-    <div class="container" id= "container-box">
-
-    <h5>Bernedoodles</h5>
+    <u>Bernedoodles</u>
     <div class="fb-like" data-href="https://bernedoodles.herokuapp.com/" data-width="20px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>    <p>
       Looking for a family dog? Bernedoodles are a mix between a  Bernese Mountain Dog and a Poodle. They are fun, athletic, entertaining, loyal, friendly, and great with children. They range from 50 pounds to 110 pounds.
       In addition to being lovable they don't shed!
@@ -16,5 +15,31 @@
     <% @pictures.each do |picture| %>
       <div class="item"><%= image_tag picture.name.url(:medium) %> </div>
     <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-sm-4">
+    <div class="box">
+      <h2>Up Coming Litters</h2>
+    </div>
+
+  </div>
+
+  <div class="col-sm-4">
+    <div class="box">
+    <h2> <%= link_to "Galler", pictures_path %></h2>
+    <p>
+      See pictures of past litters and parent dogs.
+    </p>
+  </div>
+  </div>
+  <div class="col-sm-4" id="container-box">
+    <div class="box">
+      <h2> <%= link_to "More Informaiton", info_path %> </h2>
+      <p>
+        Learn about the breed, cost of a puppy, and contract.
+      </p>
+  </div>
   </div>
 </div>
