@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :dogs do
-    resources :litters do
-      resources :puppies
-    end
+    resources :litters, only: [:new, :create]
   end
+  resources :litters, :except => [:new, :create] do
+    resources :puppies
+  end
+
   resources :pictures
   resources :users, only: [:index, :show]
   get 'userpage', to: 'users#index', as: 'userpage'

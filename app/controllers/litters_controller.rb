@@ -1,7 +1,8 @@
 class LittersController < ApplicationController
 
   def show
-    @dog = Dog.find(params[:dog_id])
+    binding.pry
+    @dog = Dog.find(params[:dog].to_i)
     @litter = Litter.find(params[:id])
     @puppies = @litter.puppies
   end

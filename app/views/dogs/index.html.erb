@@ -1,5 +1,5 @@
 <div class="show">
-  <div class="container box">
+  <div class="box">
 
   <h2>Adult Dogs</h2>
   <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
@@ -13,8 +13,9 @@
 
   <% @dogs.each do |dog| %>
       <tr>
-
-      <td><%= link_to image_tag(dog.pictures[0].name(:medium)), dog_path(dog) %></td>
+      <% if dog.pictures.any? %>
+        <td><%= link_to image_tag(dog.pictures[0].name(:medium)), dog_path(dog) %></td>
+      <% end %>
       <td> <%= link_to dog.name, dog_path(dog) %> </td>
         <% dog.litters.each do |litter| %>
           <td> <%=link_to "Due Date: #{litter.due_date.strftime('%B %d, %Y')}", dog_litter_path(dog, litter)%>

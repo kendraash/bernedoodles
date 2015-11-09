@@ -1,4 +1,4 @@
-<div class="container box">
+<div class="box">
   <div class="show">
     <h2><%= @dog.name %></h2>
 
@@ -15,22 +15,20 @@
     <hr>
     <h3>Upcoming Litters</h3>
     <% @litters.each do |litter| %>
-      <%= link_to litter.due_date.strftime("%B %d, %Y"), dog_litter_path(@dog, litter) %>
+      <%= link_to litter.due_date.strftime("%B %d, %Y"), litter_path(litter, dog: @dog) %>
     <% end %>
     <br>
   </div>
 </div>
-<div class="container">
-  <div class="text-center">
-    <% @dog.pictures.each do |picture| %>
-      <div class="col-sm-4">
-        <%= image_tag picture.name(:medium) %>
-        <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
-          <%= link_to "Delete", picture_path(picture),
-                             :data => {:confirm => "You sure?",
-                                       :method => "delete"} , class: "button" %>
-        <% end %>
-        </div>
+<div class="text-center">
+  <% @dog.pictures.each do |picture| %>
+    <div class="col-sm-4">
+      <%= image_tag picture.name(:medium) %>
+      <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+        <%= link_to "Delete", picture_path(picture),
+                           :data => {:confirm => "You sure?",
+                                     :method => "delete"} , class: "button" %>
       <% end %>
     </div>
-  </div>
+  <% end %>
+</div>
