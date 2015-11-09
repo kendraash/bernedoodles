@@ -2,7 +2,6 @@
   <div class="show">
     <h2><%= @dog.name %></h2>
 
-    <!-- <button name="button"><%= link_to "Add Litter", new_dog_litter_path(@dog) %> </button> -->
   <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
     <div id="picture_ajax" class = "text-center">
       <%= link_to "Add Picture", new_picture_path(dog: @dog), class: "button", id: "add_picture_link", remote: true %>
@@ -11,11 +10,11 @@
       <%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %>
     </div>
   <% end %>
-
+    <%= link_to "Back to Dogs", dogs_path %>
     <hr>
     <h3>Upcoming Litters</h3>
     <% @litters.each do |litter| %>
-      <%= link_to litter.due_date.strftime("%B %d, %Y"), litter_path(litter, dog: @dog) %>
+      <%= link_to litter.due_date.strftime("%B %d, %Y"), litter_path(litter) %>
     <% end %>
     <br>
   </div>

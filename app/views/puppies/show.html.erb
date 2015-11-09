@@ -4,14 +4,14 @@
       DOB: <%= @puppy.date_of_birth.strftime("%B %d, %Y") %> <br>
       Gender: <%= @puppy.sex %> <br>
 
- <%= link_to "Back to puppies", dog_litter_path(@dog, @litter)%>
+ <%= link_to "Back to puppies", litter_path(@litter)%>
 
     <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
     <div id="picture_ajax" class = "text-center">
       <%= link_to "Add Picture", new_picture_path(puppy: @puppy), class: "button", id: "add_picture_link", remote: true %><br>
     </div>
-      <%= link_to "Edit Puppy", edit_dog_litter_puppy_path(@dog, @litter, @puppy), class: "button"%> <br>
-      <%= link_to "Delete", dog_litter_puppy_path(@dog, @litter, @puppy),
+      <%= link_to "Edit Puppy", edit_litter_puppy_path(@litter, @puppy), class: "button"%> <br>
+      <%= link_to "Delete", litter_puppy_path(@litter, @puppy),
                            :data => {:confirm => "You sure?",
                                      :method => "delete"} , class: "button" %>
     <% end %>

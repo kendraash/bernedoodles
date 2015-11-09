@@ -1,6 +1,6 @@
 <%= render 'layouts/errors', :object => @puppy %>
 
-<%= form_for [@dog, @litter, @puppy] do |f|%>
+<%= form_for [@litter, @puppy] do |f|%>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.radio_button(:sex, "female") %>

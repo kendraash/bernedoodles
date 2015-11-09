@@ -21,6 +21,7 @@ class DogsController < ApplicationController
   def show
     @dog = Dog.find(params[:id])
     @litters = @dog.litters
+    
   end
 
   private

@@ -14,6 +14,8 @@ gem 'owlcarousel2-rails', github: 'openscript/owlcarousel2-rails'
 gem "paperclip", "~> 4.3"
 gem 'hirb'
 gem 'paypal-sdk-rest'
+gem 'seed_dump'
+
 group :development do
   gem 'byebug'
   gem 'web-console'

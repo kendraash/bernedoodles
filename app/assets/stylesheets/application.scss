@@ -18,7 +18,7 @@ background-size: cover;
   font-family: 'Raleway', sans-serif;
   color: #dedad5;
   min-height: 100vh;
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 a {
   color: #dedad5;
@@ -109,6 +109,14 @@ li  {
 #homepage-title {
   font-size: 3em;
 }
+
+.profile_picture {
+  height: 90px;
+  width: 90px;
+  
+
+}
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
