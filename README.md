@@ -3,6 +3,7 @@
 #### By **_Kendra Ash_**
 
 ## Heroku: bernedoodles.herokuapp.com
+
 ## Description
 
 _Using this app, users can:_
@@ -19,7 +20,7 @@ _Using this app, users can:_
 ```
 bundle                   # installs necessary dependencies
 brew install imagemagick # imagemagick is necessary for the paperclip gem (this is for Mac OSX, adjust to your OS)
-postgres &               # starts up the postgres server in background
+postgres                # starts up the postgres server in background
 rake db:init             # runs rake db:drop, :create, :migrate, :seed and :test:prepare
 rails s                  # starts up the rails server
 ```
@@ -30,8 +31,8 @@ rails s                  # starts up the rails server
 
 ## Technologies Used
 
-_Ruby, rspec, Rails, Capybara, Postgres, Rake, Active Record_, ImageMagick
-Facebook API: https://developers.facebook.com/docs/plugins/like-button
+_Ruby, rspec, Rails, Capybara, Postgres, Rake, Active Record, ImageMagick
+Facebook API: https://developers.facebook.com/docs/plugins/like-button_
 
 ### Legal
 
