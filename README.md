@@ -33,7 +33,7 @@ rails s                  # starts up the rails server
 
 _Ruby, rspec, Rails, Capybara, Postgres, Rake, Active Record, ImageMagick
 Facebook API: https://developers.facebook.com/docs/plugins/like-button_
-
+PayPal API: https://github.com/paypal/PayPal-Ruby-SDK
 ### Legal
 
 Copyright (c) 2015 **_Kendra Ash_**

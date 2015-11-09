@@ -39,14 +39,12 @@ input {
   font-size: 1.5em;
 }
 
-#carousel-home {
-  margin: 3px;
-
-}
 #carousel-home .item{
   display: block;
   width: 100%;
   height: auto;
+  margin: 3px;
+
 }
 
 label {
@@ -108,14 +106,18 @@ li  {
 #landing-page {
   padding: 10px;
 }
+#homepage-title {
+  font-size: 3em;
+  padding: 10px;
 
+}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .box {
-    width: 80%;
+    width: auto;
   }
 
 }
