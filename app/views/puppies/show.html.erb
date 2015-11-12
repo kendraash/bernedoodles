@@ -4,6 +4,7 @@
     <h4>Date Of Birth: <%= @puppy.date_of_birth.strftime("%B %d, %Y") %></h4>
     <h4>Gender: <%= @puppy.sex %></h4>
     <h4><%= link_to "Back to puppies", litter_path(@litter)%></h4>
+    <h4><%= link_to "Back", :back %></h4>
     <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
       <div id="picture_ajax" class = "text-center">
         <%= link_to "Add Picture", new_picture_path(puppy: @puppy), class: "button", id: "add_picture_link", remote: true %><br>

@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
   end
-  
+
   def new
     @picture = Picture.new
     if params[:dog]
@@ -12,8 +12,10 @@ class PicturesController < ApplicationController
     elsif params[:puppy]
       @imageable_id = (params[:puppy])
       @imageable_type = 'Puppy'
+    else
+      @imageable_id = (params[:litter])
+      @imageable_type = 'Litter'
     end
-
   end
 
   def create

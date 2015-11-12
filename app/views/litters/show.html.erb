@@ -3,11 +3,15 @@
   <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
     <div id="puppy_ajax">
       <%= link_to "Add Puppy", new_litter_puppy_path(@litter), id: "new_puppy_link", remote: true %>
+      <div id="picture_ajax" class = "text-center">
+        <%= link_to "Add Picture", new_picture_path(litter: @litter), class: "button", id: "add_picture_link", remote: true %><br>
+      </div>
       <hr>
     </div>
+
   <% end %>
   <h2>Puppies</h2>
-  <h4><%= link_to "Back", dogs_path %></h4>
+    <h4><%= link_to "Back", :back %></h4>
 </div>
 <br>
 
