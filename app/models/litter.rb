@@ -5,4 +5,13 @@ class Litter<ActiveRecord::Base
   has_many :puppies
 
   has_many :pictures, as: :imageable
+
+
+  def upcoming_litters
+    Litter.all.each do |litter|
+     if litter.due_date >= Date.today
+       litter.due_date
+     end
+    end
+  end
 end
