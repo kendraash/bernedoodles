@@ -6,6 +6,10 @@ class LittersController < ApplicationController
     @puppies = @litter.puppies
   end
 
+  def index
+
+  end
+  
   def new
     @dog = Dog.find(params[:dog_id])
     @litter = Litter.new

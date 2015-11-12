@@ -1,15 +1,14 @@
-<div class="show">
-  <div class="box">
+<div class="show box">
 
     <h2><%= @dog.name%> Due: <%= @litter.due_date.strftime("%B %d, %Y") %> </h2>
     <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
     <div id="puppy_ajax">
       <%= link_to "Add Puppy", new_litter_puppy_path(@litter), id: "new_puppy_link", remote: true %>
-    </div>
     <% end %>
     <hr>
     <h2>Puppies</h2>
-    <div class="col-md-6">
+  </div>
+    <div class="col-md-6 ">
 
       <ul><u><h3>Girls</h3></u>
       <% @puppies.each do |puppy| %>
@@ -19,8 +18,7 @@
       <% end %>
       </ul>
     </div>
-    <div class="col-md-4">
-
+    <div class="col-md-6 ">
       <ul><u><h3>Boys</h3></u>
       <% @puppies.each do |puppy| %>
         <% if puppy.sex == "male" || puppy.sex == "Male"%>
@@ -30,4 +28,3 @@
     </ul>
     </div>
   </div>
-</div>
