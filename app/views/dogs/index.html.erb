@@ -1,49 +1,52 @@
 <div class="show">
   <div class="box">
 
-    <h2>Adult Dogs</h2>
+    <u><h2>Adult Dogs</h2></u>
     <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
     <div id="dog_ajax">
       <%= link_to "Add Dog", new_dog_path, id: "new_dog_link", remote: true, :html => {class: "button btn-md"} %>
     </div>
     <% end %>
     <br>
-
+    <br>
 
     <% @dogs.each do |dog| %>
       <div class="row">
-
-      <% if dog.pictures.any? %>
-        <div class="col-sm-4">
-          <h3><%= link_to dog.name, dog_path(dog) %></h3>
-          <%= link_to image_tag(dog.pictures[0].name(:medium)), dog_path(dog) %>
-        </div>
-      <% end %>
-
-      <% dog.litters.each do |litter| %>
-        <center>
-          <h3><%=link_to "Due Date: #{litter.due_date.strftime('%B %d, %Y')}", litter_path(litter, dog: dog)%></h3>
-        </center>
-        <div class="col-sm-4">
-          <% litter.puppies.each do |puppy| %>
-            <% if puppy.sex == "male"%>
-              <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
-              <%= link_to "#{puppy.name}", litter_puppy_path(litter, puppy) %> <br>
+        <% if dog.pictures.any? %>
+          <div class="col-sm-4">
+            <h3><%= link_to dog.name, dog_path(dog) %></h3>
+            <%= link_to image_tag(dog.pictures[0].name(:medium)), dog_path(dog) %>
+          </div>
+        <% else %>
+          <div class="col-sm-4">
+            <h3><%= link_to dog.name, dog_path(dog) %></h3>
+            <h4>Picture coming soon!</h4>
+          </div>
+        <% end %>
+        <% dog.litters.each do |litter| %>
+          <center>
+            <h3><%=link_to "Due Date: #{litter.due_date.strftime('%B %d, %Y')}", litter_path(litter, dog: dog)%></h3>
+          </center>
+          <div class="col-sm-4">
+            <% litter.puppies.each do |puppy| %>
+              <% if puppy.sex == "male"%>
+                <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
+                <%= link_to "#{puppy.name}", litter_puppy_path(litter, puppy) %> <br>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
 
-        <div class="col-sm-4">
-          <% litter.puppies.each do |puppy| %>
-            <% if puppy.sex == "female"%>
-              <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
-              <%= link_to "#{puppy.name}", litter_puppy_path(litter, puppy) %> <br>
+          <div class="col-sm-4">
+            <% litter.puppies.each do |puppy| %>
+              <% if puppy.sex == "female"%>
+                <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
+                <%= link_to "#{puppy.name}", litter_puppy_path(litter, puppy) %> <br>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
-
+          </div>
         <% end %>
       </div>
+      <hr>
     <% end %>
   </div>
 </div>

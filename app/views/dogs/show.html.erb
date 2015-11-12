@@ -1,20 +1,27 @@
 <div class="box">
   <div class="show">
     <h2><%= @dog.name %></h2>
-
-  <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
-    <div id="picture_ajax" class = "text-center">
-      <%= link_to "Add Picture", new_picture_path(dog: @dog), class: "button", id: "add_picture_link", remote: true %>
-    </div>
-    <div id="litter_ajax">
-      <%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %>
-    </div>
-  <% end %>
-    <%= link_to "Back to Dogs", dogs_path %>
+    <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
+      <div>
+        <h4> <%= link_to "Edit #{@dog.name}", edit_dog_path(@dog), class: "button" %> </h4>
+      </div>
+      <div>
+        <h4> <%= link_to "Delete #{@dog.name}", dog_path(@dog),
+                             :data => {:confirm => "You sure?",
+                                       :method => "delete"} , class: "button" %></h4>
+      </div>
+      <div id="picture_ajax" class = "text-center">
+        <h4><%= link_to "Add Picture", new_picture_path(dog: @dog), id: "add_picture_link", remote: true %></h4>
+      </div>
+      <div id="litter_ajax">
+        <h4><%= link_to "Add Litter", new_dog_litter_path(@dog), id: "new_litter_link", remote: true %></h4>
+      </div>
+    <% end %>
+    <h4><%= link_to "Back to Dogs", dogs_path %></h4>
     <hr>
     <h3>Upcoming Litters</h3>
     <% @litters.each do |litter| %>
-      <%= link_to litter.due_date.strftime("%B %d, %Y"), litter_path(litter) %>
+    <h4><%= link_to litter.due_date.strftime("%B %d, %Y"), litter_path(litter) %></h4>
     <% end %>
     <br>
   </div>
@@ -24,7 +31,7 @@
     <div class="col-sm-4">
       <%= image_tag picture.name(:medium) %>
       <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
-        <%= link_to "Delete", picture_path(picture),
+        <%= link_to "Delete Picture", picture_path(picture),
                            :data => {:confirm => "You sure?",
                                      :method => "delete"} , class: "button" %>
       <% end %>
