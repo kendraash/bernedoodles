@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get 'userpage', to: 'users#index', as: 'userpage'
 
   get 'info', to: 'info#index', as: 'info'
+  get 'contract', to: 'contract#index', as: 'contract'
+
 end
