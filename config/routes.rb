@@ -11,9 +11,15 @@ Rails.application.routes.draw do
 
   resources :pictures
   resources :users, only: [:index, :show]
+
+  resources :registrations, only: [:create]
+
   get 'userpage', to: 'users#index', as: 'userpage'
 
   get 'info', to: 'info#index', as: 'info'
   get 'contract', to: 'contract#index', as: 'contract'
 
+
+  post "/registrations/:id" => "registrations#show"
+  post "/hook" => "regstrations#hook"
 end
