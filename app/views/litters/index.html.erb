@@ -1,0 +1,10 @@
+<div class=" box text-center">
+  <h2>Litters</h2>
+  <hr>
+  <% @litters.each do |litter| %>
+    <h3><%=link_to "Due Date: #{litter.due_date.strftime('%B %d, %Y')}", litter_path(litter)%></h3>
+    <% if litter.pictures.any? %>
+      <%= link_to image_tag(litter.pictures[0].name(:medium)), litter_path(litter) %>
+    <% end %>
+  <% end %>
+</div>

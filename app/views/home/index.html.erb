@@ -1,14 +1,58 @@
+<div id="homepage-title">Whine Country Bernedoodles</div>
 
+
+<div class="box">
   <div class="breed-description">
-    <h5>Bernedoodles</h5>
+    <u>Bernedoodles</u>
     <div class="fb-like" data-href="https://bernedoodles.herokuapp.com/" data-width="20px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>    <p>
-      Looking for a family dog? Bernedoodles are a mix between a  Bernese Mountain Dog and a Poodle. They are fun, athletic, entertaining, loyal, friendly, and great with children. They range from 50 pounds to 110 pounds.
+      Looking for a family dog? Bernedoodles are a mix between a  Bernese Mountain Dog and a Standard Poodle. They are fun, athletic, entertaining, loyal, friendly, and great with children. They range from 50 pounds to 110 pounds.
       In addition to being lovable they don't shed!
     </p>
   </div>
+</div>
   <br>
+
+
   <div class="owl-carousel" id = "carousel-home">
     <% @pictures.each do |picture| %>
       <div class="item"><%= image_tag picture.name.url(:medium) %> </div>
     <% end %>
   </div>
+</div>
+
+<div class="text-center">
+  <div class="col-sm-4">
+    <div class="box">
+      <h2> <%= link_to "Up Coming Litters", litters_path %></h2>
+    </div>
+
+  </div>
+
+  <div class="col-sm-4">
+    <div class="box">
+    <h2> <%= link_to "Gallery", pictures_path %></h2>
+    <p>
+      See pictures of past litters and parent dogs.
+    </p>
+  </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="box">
+      <h2> <%= link_to "More Informaiton", info_path %> </h2>
+      <p>
+        Learn about the breed, cost of a puppy, and contract.
+      </p>
+  </div>
+  </div>
+
+  <h3>Wait list for Next Litter</h3>
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+    ">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form>
+  
+  <%= link_to "Reserve Spot for a puppy", registrations_path %>
+</div>

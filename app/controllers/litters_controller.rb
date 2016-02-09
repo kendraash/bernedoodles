@@ -1,9 +1,13 @@
 class LittersController < ApplicationController
 
   def show
-    @dog = Dog.find(params[:dog_id])
     @litter = Litter.find(params[:id])
+    @dog = Dog.find(@litter.dog_id)
     @puppies = @litter.puppies
+  end
+
+  def index
+    @litters = Litter.all
   end
 
   def new

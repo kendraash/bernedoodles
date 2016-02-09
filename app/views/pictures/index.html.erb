@@ -1,1 +1,5 @@
-<h1>test</h1>
+  <% @pictures.each do |picture| %>
+    <div class="col-sm-4">
+      <%= image_tag picture.name(:medium) %>
+    </div>
+  <%end %>

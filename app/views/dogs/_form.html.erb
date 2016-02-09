@@ -2,8 +2,10 @@
 <%= form_for @dog do |f|%>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.label :sex %>
-  <%= f.text_field :sex %>
+  <%= f.radio_button(:sex, "female") %>
+  <%= f.label(:Female) %>
+  <%= f.radio_button(:sex, "male") %>
+  <%= f.label(:Male) %>
   <%= f.label :date_of_birth %>
   <%= f.date_field :date_of_birth %>
   <%= f.submit "Submit", id: "create_dog" %>

@@ -1,14 +1,37 @@
-<div class="show">
-
+<div class="box text-center">
   <h2><%= @dog.name%> Due: <%= @litter.due_date.strftime("%B %d, %Y") %> </h2>
   <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
-  <div id="puppy_ajax">
-    <%= link_to "Add Puppy", new_dog_litter_puppy_path(@dog, @litter), id: "new_puppy_link", remote: true %>
+    <div id="puppy_ajax">
+      <%= link_to "Add Puppy", new_litter_puppy_path(@litter), id: "new_puppy_link", remote: true %>
+      <div id="picture_ajax" class = "text-center">
+        <%= link_to "Add Picture", new_picture_path(litter: @litter), class: "button", id: "add_picture_link", remote: true %><br>
+      </div>
+      <hr>
+    </div>
+
+  <% end %>
+  <h2>Puppies</h2>
+    <h4><%= link_to "Back", :back %></h4>
+</div>
+<br>
+
+<div class="row box">
+  <div class="col-xs-12 col-sm-6">
+    <ul><u><h3 class="text-center">Girls</h3></u>
+      <% @puppies.each do |puppy| %>
+        <% if puppy.sex == "female" %>
+          <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
-  <% end %>
-  <hr>
-  <h3>Puppies</h3>
-  <% @puppies.each do |puppy| %>
-    <h5><%= link_to puppy.name, dog_litter_puppy_path(@dog, @litter, puppy) %></h5>
-  <% end %>
+  <div class="col-xs-12 col-sm-6">
+    <ul><u><h3 class="text-center">Boys</h3></u>
+      <% @puppies.each do |puppy| %>
+        <% if puppy.sex == "male" || puppy.sex == "Male"%>
+          <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>

@@ -1,41 +1,40 @@
 class PuppiesController < ApplicationController
 
   def show
-    @dog = Dog.find(params[:dog_id])
     @litter = Litter.find(params[:litter_id])
+    @dog = Dog.find(@litter.dog_id)
     @puppy = Puppy.find(params[:id])
   end
 
   def new
-    @dog = Dog.find(params[:dog_id])
     @litter = Litter.find(params[:litter_id])
     @puppy = Puppy.new
   end
 
   def create
-    @dog = Dog.find(params[:dog_id])
     @litter = Litter.find(params[:litter_id])
+    @dog = Dog.find(@litter.dog_id)
     @puppy = @litter.puppies.new(puppy_params)
     @puppy.user = current_user
    if @puppy.save
-     redirect_to dog_litter_path(@dog.id, @litter.id)
+     redirect_to litter_path(@litter.id)
    else
      render :new
    end
   end
 
   def edit
-    @dog = Dog.find(params[:dog_id])
     @litter = Litter.find(params[:litter_id])
+    @dog = Dog.find(@litter.dog_id)
     @puppy = Puppy.find(params[:id])
   end
 
   def update
-    @dog = Dog.find(params[:dog_id])
     @litter = Litter.find(params[:litter_id])
+    @dog = Dog.find(@litter.dog_id)
     @puppy= Puppy.find(params[:id])
     if @puppy.update(puppy_params)
-      redirect_to dog_litter_puppy_path(@dog.id, @litter.id, @puppy.id)
+      redirect_to litter_puppy_path(@litter.id, @puppy.id)
     else
       render :edit
     end
@@ -47,7 +46,7 @@ class PuppiesController < ApplicationController
     @dog = Dog.find(@litter.dog_id)
 
     @puppy.destroy
-    redirect_to dog_litter_path(@dog.id, @litter.id)
+    redirect_to litter_path(@litter.id)
   end
 
 
