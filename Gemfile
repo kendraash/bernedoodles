@@ -15,8 +15,9 @@ gem "paperclip", "~> 4.3"
 gem 'hirb'
 gem 'paypal-sdk-rest'
 gem 'seed_dump'
-gem 'aws-sdk', '~> 1.36.1'
 gem 'fog'
+gem 'aws-sdk'
+
 group :development do
   gem 'byebug'
   gem 'web-console'
