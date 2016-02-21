@@ -5,8 +5,8 @@
   <div class="breed-description">
     <u>Bernedoodles</u>
     <div class="fb-like" data-href="https://bernedoodles.herokuapp.com/" data-width="20px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>    <p>
-      Looking for a family dog? Bernedoodles are a mix between a  Bernese Mountain Dog and a Standard Poodle. They are fun, athletic, entertaining, loyal, friendly, and great with children. They range from 50 pounds to 110 pounds.
-      In addition to being lovable they don't shed!
+      Looking for a family dog? Bernedoodles are a mix between a Bernese Mountain Dog and a Standard Poodle. They are fun, athletic, entertaining, loyal, friendly, and great with children. They range from 50 pounds to 110 pounds.
+      In addition to being lovable they have minimal to no shedding! Puppies are sold as pets only.
     </p>
   </div>
 </div>
@@ -24,6 +24,17 @@
   <div class="col-sm-4">
     <div class="box">
       <h2> <%= link_to "Up Coming Litters", litters_path %></h2>
+      <h2>Waiting List</h2>
+        <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
+        <div>
+          <%= link_to "Add Name", new_list_path, id: "new_list_link", remote: true, :html => {class: "button btn-md"} %>
+        </div>
+        <% end %>
+      <ol id = "waiting-list">
+        <% @Lists.each do |list| %>
+          <li> <%= link_to list.name, list_path(list) %> </li>
+        <% end %>
+      </ol>
     </div>
 
   </div>
