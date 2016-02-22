@@ -4,7 +4,7 @@ class Picture < ActiveRecord::Base
         :default_url => "****",
         :storage => :s3,
         :bucket => '****',
-        :s3_credentials => "#{RAILS_ROOT}/config/secrets.yml",
+        :s3_credentials => "../../config/secrets.yml",
             :url => :s3_path_url,
             :path => ":image/:id/:style/:basename.:extension"
   validates_attachment_content_type :name, content_type: /\Aimage\/.*\Z/
