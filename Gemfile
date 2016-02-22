@@ -16,7 +16,7 @@ gem 'hirb'
 gem 'paypal-sdk-rest'
 gem 'seed_dump'
 gem 'fog'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 group :development do
   gem 'byebug'
