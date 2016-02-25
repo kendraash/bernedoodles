@@ -11,9 +11,13 @@ Rails.application.routes.draw do
 
   resources :pictures
   resources :users, only: [:index, :show]
-  resources :lists
   resources :registrations, only: [:create]
 
+  resources :lists do
+    resources :customers
+  end
+  
+  end
   get 'userpage', to: 'users#index', as: 'userpage'
 
   get 'info', to: 'info#index', as: 'info'
