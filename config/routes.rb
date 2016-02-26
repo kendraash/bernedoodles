@@ -17,7 +17,6 @@ Rails.application.routes.draw do
     resources :customers
   end
   
-  end
   get 'userpage', to: 'users#index', as: 'userpage'
 
   get 'info', to: 'info#index', as: 'info'

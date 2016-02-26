@@ -29,24 +29,16 @@ class CustomersController < ApplicationController
     end
   end
 
-  def mark
-    @customer = Customer.find(params[:id])
-    @customer.update_attribute(:done, true)
-    redirect_to list_path(params[:list_id])
-  end
-
   def destroy
     @customer = Customer.find(params[:id])
     @customer.destroy
     redirect_to list_path(params[:list_id])
   end
 
-
-
   private
 
     def customer_params
-      params.require(:customer).permit(:name)
+      params.require(:customer).permit(:name, :city, :state)
       # params.require(:customer).permit(:done)
     end
 end

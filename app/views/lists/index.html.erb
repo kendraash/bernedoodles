@@ -3,5 +3,14 @@
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
+    <% if list.customers.any? %>
+      <ul>
+          <% list.customers do |customer| %>
+            <li>
+              <%= customer.name %> | <%= customer.city %> + ", " + <%= customer.state %>
+              </li>
+          <% end %>
+        </ul>
+    <% end %>
   <% end %>
 </ul>

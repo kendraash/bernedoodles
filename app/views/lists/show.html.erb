@@ -1,9 +1,31 @@
+<h1><%= @list.name %></h1>
 <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
-<div>
-  <h1><%= @list.name %></h1>
-
-  <%= link_to "Edit", edit_list_path(@list) %>
-
-  <p><%= link_to "Delete List", list_path(@list), :data => {:confirm => "You sure?", :method => "delete"} %> </p>
-</div>
+  <div>
+    <%= link_to "Edit", edit_list_path(@list) %>
+    <p><%= link_to "Delete List", list_path(@list), :data => {:confirm => "You sure?", :method => "delete"} %> </p>
+  </div>
+  <p>
+    <%= link_to "Add Customer", new_list_customer_path(@list) %>
+  </p>
+  <ul>
+    <% if @list.customers.any? %>
+      <% @list.customers do |customer| %>
+        <li>
+          <%= customer.name %> |
+          <%= link_to "Edit", edit_list_customer_path(@list, customer) %> |
+          <%= link_to "Delete", list_customer_path(@list, customer), :data => {:confirm => "Are you sure?", :method => "delete"} %> |
+          </li>
+      <% end %>
+    <% end %>
+  </ul>
+  <% else %>
+    <ul>
+      <% if @list.customers.any? %>
+        <% @list.customers do |customer| %>
+          <li>
+            <%= customer.name %> | <%= customer.city %> + ", " + <%= customer.state %>
+            </li>
+        <% end %>
+      <% end %>
+    </ul>
 <% end %>
