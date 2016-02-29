@@ -9,7 +9,7 @@
   </p>
   <ul>
     <% if @list.customers.any? %>
-      <% @list.customers do |customer| %>
+      <% @list.customers.each do |customer| %>
         <li>
           <%= customer.name %> |
           <%= link_to "Edit", edit_list_customer_path(@list, customer) %> |
@@ -19,13 +19,11 @@
     <% end %>
   </ul>
   <% else %>
-    <ul>
-      <% if @list.customers.any? %>
-        <% @list.customers do |customer| %>
-          <li>
-            <%= customer.name %> | <%= customer.city %> + ", " + <%= customer.state %>
-            </li>
-        <% end %>
+  <% if list.customers.any? %>
+    <ol>
+      <% list.customers.each do |customer| %>
+        <li><%= customer.name %>, <%= customer.state %></li>
       <% end %>
-    </ul>
+    </ol>
+  <% end %>
 <% end %>
