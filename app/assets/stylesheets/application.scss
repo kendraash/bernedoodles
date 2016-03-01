@@ -18,11 +18,10 @@ background-size: cover;
   font-family: 'Raleway', sans-serif;
   color: #dedad5;
   min-height: 100vh;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 a {
   color: #dedad5;
-
 
 }
 a:hover {
@@ -114,6 +113,9 @@ li  {
   height: 90px;
   width: 90px;
 }
-#waiting-list ol li {
+#waiting-list ol {
   list-style: decimal;
+  margin-left: 0;
+  margin-right: 0;
+
 }

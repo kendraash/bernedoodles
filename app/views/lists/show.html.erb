@@ -19,9 +19,9 @@
     <% end %>
   </ul>
   <% else %>
-  <% if list.customers.any? %>
-    <ol>
-      <% list.customers.each do |customer| %>
+  <% if @list.customers.any? %>
+    <ol id="waiting-list">
+      <% @list.customers.each do |customer| %>
         <li><%= customer.name %>, <%= customer.state %></li>
       <% end %>
     </ol>

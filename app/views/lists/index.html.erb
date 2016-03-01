@@ -4,7 +4,7 @@
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
     <% if list.customers.any? %>
-    <ol>
+    <olid="waiting-list">
       <% list.customers.each do |customer| %>
         <li><%= customer.name %>, <%= customer.state %></li>
       <% end %>
