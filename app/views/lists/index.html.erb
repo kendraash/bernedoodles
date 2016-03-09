@@ -6,9 +6,9 @@
       <% @lists.each do |list| %>
         <li> <h4><%= link_to list.name, list_path(list) %> </h4> </li>
         <% if list.customers.any? %>
-        <ol id="waiting-list">
+        <olid="waiting-list">
           <% list.customers.each do |customer| %>
-            <li> <%= customer.name + ", " + customer.state %> </li>
+            <li> <%= customer.name %>,  <%= customer.state %> </li>
           <% end %>
         </ol>
         <% end %>
