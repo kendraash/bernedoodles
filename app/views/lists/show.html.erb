@@ -24,7 +24,7 @@
       <% if @list.customers.any? %>
         <ol id="waiting-list">
           <% @list.customers.each do |customer| %>
-            <li> <h4> <%= customer.name %>, <%= customer.state %> </h4></li>
+            <li> <h4> <%= customer.name + ", " + customer.state %> </h4></li>
           <% end %>
         </ol>
       <% end %>
