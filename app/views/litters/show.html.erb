@@ -18,18 +18,22 @@
 <div class="row box">
   <div class="col-xs-12 col-sm-6">
     <ul><u><h3 class="text-center">Girls</h3></u>
-      <% @puppies.each do |puppy| %>
-        <% if puppy.sex == "female" %>
-          <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+      <% if @puppies.any? %>
+        <% @puppies.each do |puppy| %>
+          <% if puppy.sex == "female" %>
+            <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+          <% end %>
         <% end %>
       <% end %>
     </ul>
   </div>
   <div class="col-xs-12 col-sm-6">
     <ul><u><h3 class="text-center">Boys</h3></u>
-      <% @puppies.each do |puppy| %>
-        <% if puppy.sex == "male" || puppy.sex == "Male"%>
-          <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+      <% if @puppies.any? %>
+        <% @puppies.each do |puppy| %>
+          <% if puppy.sex == "male" || puppy.sex == "Male"%>
+            <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+          <% end %>
         <% end %>
       <% end %>
     </ul>
