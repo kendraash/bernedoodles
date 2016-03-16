@@ -21,7 +21,11 @@
       <% if @puppies.any? %>
         <% @puppies.each do |puppy| %>
           <% if puppy.sex == "female" %>
-            <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+            <% if puppy.pictures.any? %>
+              <li><h4 class="text-center"><%= image_tag puppy.pictures[0].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+            <% else %>
+              <li><h4 class="text-center"> Pictures comming soon! <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>
@@ -32,7 +36,11 @@
       <% if @puppies.any? %>
         <% @puppies.each do |puppy| %>
           <% if puppy.sex == "male" || puppy.sex == "Male"%>
-            <li><h4 class="text-center"><%= image_tag puppy.pictures[1].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+            <% if puppy.pictures.any? %>
+              <li><h4 class="text-center"><%= image_tag puppy.pictures[0].name, class: "profile_picture"%> <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+            <% else %>
+              <li><h4 class="text-center"> Pictures comming soon! <%= link_to puppy.name, litter_puppy_path(@litter, puppy) %> </h4></li>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>

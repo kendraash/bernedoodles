@@ -15,18 +15,20 @@
                                        :method => "delete"} , class: "button" %>
     <% end %>
 
-    
+
   </div>
 </div>
 <div class="row text-center">
-  <% @puppy.pictures.each do |picture| %>
-    <div class="col-xs-12 col-sm-4">
-      <%= image_tag picture.name(:medium) %>
-      <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
-        <%= link_to "Delete", picture_path(picture),
-                           :data => {:confirm => "You sure?",
-                                     :method => "delete"} , class: "button" %>
-      <% end %>
-    </div>
+  <% if @puppy.pictures.any? %>
+    <% @puppy.pictures.each do |picture| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= image_tag picture.name(:medium) %>
+        <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+          <%= link_to "Delete", picture_path(picture),
+                             :data => {:confirm => "You sure?",
+                                       :method => "delete"} , class: "button" %>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 </div>
