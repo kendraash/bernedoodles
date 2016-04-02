@@ -23,33 +23,34 @@
             <h4>Picture coming soon!</h4>
           </div>
         <% end %>
-        <% if dog.litters.any? %>
+        <% if dog.litters.any?%>
           <% dog.litters.each do |litter| %>
-            <center>
-              <h3><%=link_to "Due Date: #{litter.due_date.strftime('%B %d, %Y')}", litter_path(litter, dog: dog)%></h3>
-            </center>
-            <% if litter.puppies.any? %>
-            <div class="col-sm-4">
-                <% litter.puppies.each do |puppy| %>
-                  <% if puppy.pictures.any? %>
-                    <% if puppy.sex == "male"%>
-                    <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
+            <% if litter.sold == false %>
+              <center>
+                <h3><%=link_to "Due Date: #{litter.due_date.strftime('%B %d, %Y')}", litter_path(litter, dog: dog)%></h3>
+              </center>
+              <% if litter.puppies.any? %>
+              <div class="col-sm-4">
+                  <% litter.puppies.each do |puppy| %>
+                    <% if puppy.pictures.any? %>
+                      <% if puppy.sex == "male"%>
+                      <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
+                    <% end %>
+                      <%= link_to "#{puppy.name}", litter_puppy_path(litter, puppy) %> <br>
+                    <% end %>
                   <% end %>
+              </div>
+              <div class="col-sm-4">
+                <% litter.puppies.each do |puppy| %>
+                  <% if puppy.sex == "female"%>
+                    <% if puppy.pictures.any? %>
+                      <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
+                    <% end %>
                     <%= link_to "#{puppy.name}", litter_puppy_path(litter, puppy) %> <br>
                   <% end %>
                 <% end %>
-            </div>
-
-          <div class="col-sm-4">
-            <% litter.puppies.each do |puppy| %>
-              <% if puppy.sex == "female"%>
-                <% if puppy.pictures.any? %>
-                  <%= image_tag puppy.pictures[0].name, class: "profile_picture" %>
-                <% end %>
-                <%= link_to "#{puppy.name}", litter_puppy_path(litter, puppy) %> <br>
-              <% end %>
+              </div>
             <% end %>
-          </div>
           <% end %>
         <% end %>
         <% else %>

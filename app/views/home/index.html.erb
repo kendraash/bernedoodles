@@ -23,7 +23,7 @@
 <div class="text-center row">
   <div class="col-sm-4">
     <div class="box">
-      <h2> <%= link_to "Up Coming Litters", litters_path %></h2>
+      <h2> <%= link_to "Past Litters", litters_path %></h2>
       <h2> <%= link_to "Waiting List", lists_path %></h2>
         <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
           <%= link_to "Add Name", new_list_path, :html => {class: "button btn-md"} %>
