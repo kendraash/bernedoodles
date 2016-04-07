@@ -3,5 +3,9 @@
 <%= form_for [@dog, @litter] do |f| %>
   <%= f.label :due_date %>
   <%= f.date_field :due_date %>
+  <%= f.radio_button(:sold, "true") %>
+  <%= f.label(:Yes) %>
+  <%= f.radio_button(:sold, "false") %>
+  <%= f.label(:No) %>
   <%= f.submit %>
 <% end %>

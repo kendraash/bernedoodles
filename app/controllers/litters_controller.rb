@@ -26,10 +26,22 @@ class LittersController < ApplicationController
    end
   end
 
+  def edit
+    @litter = Litter.find(params[:id])
+  end
+
+  def update
+    @litter = Litter.find(params[:id])
+    if @litter.update(litter_params)
+      redirect_to litter_path(@litter.id)
+    else
+      render :edit
+    end
+  end
 
 
   private
     def litter_params
-      params.require(:litter).permit(:due_date)
+      params.require(:litter).permit(:due_date, :sold)
     end
 end
