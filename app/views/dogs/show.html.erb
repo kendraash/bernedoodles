@@ -1,7 +1,7 @@
 <div class="box">
   <div class="show">
     <h2><%= @dog.name %></h2>
-    <% if current_user != nil &&  current_user.email == "whinecountrybernedoodles@gmail.com" %>
+    <% if current_user != nil &&  current_user.email == "TestEmail" %>
       <div>
         <h4> <%= link_to "Edit #{@dog.name}", edit_dog_path(@dog), class: "button" %> </h4>
       </div>
@@ -30,7 +30,7 @@
   <% @dog.pictures.each do |picture| %>
     <div class="col-sm-4">
       <%= image_tag picture.name(:medium) %>
-      <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+      <% if current_user != nil && current_user.email == "TestEmail" %>
         <%= link_to "Delete Picture", picture_path(picture),
                            :data => {:confirm => "You sure?",
                                      :method => "delete"} , class: "button" %>

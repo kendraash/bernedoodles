@@ -1,6 +1,6 @@
 <div class="box text-center">
   <h2><%= @dog.name%> Due: <%= @litter.due_date.strftime("%B %d, %Y") %> </h2>
-  <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+  <% if current_user != nil && current_user.email == "TestEmail" %>
     <div id="puppy_ajax">
       <%= link_to "Add Puppy", new_litter_puppy_path(@litter), id: "new_puppy_link", remote: true %>
     </div>

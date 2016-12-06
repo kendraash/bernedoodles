@@ -5,7 +5,7 @@
     <h4>Gender: <%= @puppy.sex %></h4>
     <h4><%= link_to "Back to puppies", litter_path(@litter)%></h4>
     <h4><%= link_to "Back", :back %></h4>
-    <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+    <% if current_user != nil && current_user.email == "TestEmail" %>
       <div id="picture_ajax" class = "text-center">
         <%= link_to "Add Picture", new_picture_path(puppy: @puppy), class: "button", id: "add_picture_link", remote: true %><br>
       </div>
@@ -23,7 +23,7 @@
     <% @puppy.pictures.each do |picture| %>
       <div class="col-xs-12 col-sm-4">
         <%= image_tag picture.name(:medium) %>
-        <% if current_user != nil && current_user.email == "whinecountrybernedoodles@gmail.com" %>
+        <% if current_user != nil && current_user.email == "TestEmail" %>
           <%= link_to "Delete", picture_path(picture),
                              :data => {:confirm => "You sure?",
                                        :method => "delete"} , class: "button" %>

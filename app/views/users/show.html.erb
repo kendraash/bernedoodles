@@ -1,6 +1,6 @@
 <div class="show">
   <h2>Hi, <%= @user.email %></h2>
-  <% if current_user.email == "whinecountrybernedoodles@gmail.com" %>
+  <% if current_user.email == "TestEmail" %>
   <div id="dog_ajax">
     <%= link_to "Add Dog", new_dog_path, id: "new_dog_link", remote: true, :html => {class: "button btn-md"} %>
   </div>
